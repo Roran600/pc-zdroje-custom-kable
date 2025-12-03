@@ -8,6 +8,8 @@ Nákresy tvaru fyzických konektorov  sú kreslené  programom [Drawio](https://
 
 - **Zdrojové súbory** – Všeobecne platné schémy zapojenia a datasheety ku konektorom 
 
-- **Zdrojové súbory/molex-konektor-knižnica-drawio.xml** – Drawio knižnica pre robenie templatov
+- **Zdrojové súbory/molex-konektor-knižnica-drawio.xml** – Drawio knižnica pre robenie templatov konektorov 
+     Import : file - open library
+
 
 - **Zdroje podľa modelu** – Špecifické informácie pre jednotlivé modely zdrojov
