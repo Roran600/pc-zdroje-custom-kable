@@ -1,0 +1,28 @@
+connectors:
+  ZDROJ-1-8:
+    type: Molex Mini-Fit JR  Custom
+    subtype: female
+    pinlabels: [GND,SENSEA,GND,GND,SENSEB,+12,+12,+12]
+  PCIE-1-6:
+    type: Molex Mini-Fit JR  Custom
+    subtype: female
+    pinlabels: [GND,SENSEA,GND,+12,+12,+12] 
+  PCIE-1-2:
+    type: Molex Mini-Fit JR  Custom
+    subtype: female
+    pinlabels: [GND,SENSEB]    
+  PCIE-2-6:
+    type: Molex Mini-Fit JR  Custom
+    subtype: female
+    pinlabels: [GND,SENSEA,GND,+12,+12,+12] 
+  PCIE-2-2:
+    type: Molex Mini-Fit JR  Custom
+    subtype: female
+    pinlabels: [GND,SENSEB]   
+cables:
+  W1:
+    gauge: 0.25 mm2
+    length: 0.2
+    color_code: DIN
+    wirecount: 4
+    shield: true
