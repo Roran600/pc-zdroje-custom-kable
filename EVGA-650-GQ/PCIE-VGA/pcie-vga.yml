@@ -1,28 +1,71 @@
 connectors:
-  ZDROJ-1-8:
-    type: Molex Mini-Fit JR  Custom
-    subtype: female
-    pinlabels: [GND,SENSEA,GND,GND,SENSEB,+12,+12,+12]
-  PCIE-1-6:
-    type: Molex Mini-Fit JR  Custom
-    subtype: female
-    pinlabels: [GND,SENSEA,GND,+12,+12,+12] 
-  PCIE-1-2:
-    type: Molex Mini-Fit JR  Custom
-    subtype: female
-    pinlabels: [GND,SENSEB]    
-  PCIE-2-6:
-    type: Molex Mini-Fit JR  Custom
-    subtype: female
-    pinlabels: [GND,SENSEA,GND,+12,+12,+12] 
-  PCIE-2-2:
-    type: Molex Mini-Fit JR  Custom
-    subtype: female
-    pinlabels: [GND,SENSEB]   
+  ZDROJ1-8:
+    type: Phone Connector
+    subtype: male 3.5
+    pins: [T, R, S]
+    pinlabels: [Dot, Dash, Ground]
+    show_pincount: false
+    image:
+      src: fyzicka-schema/fyzicky-konektor-zdroj-strana.png
+      caption: Tip, Ring, and Sleeve
+  
+  PC1-6:
+    type: USB Connector
+    subtype: male A
+    pins: [1, 2, 3, 4]
+    pinlabels: [VCC, D-, D+, GND]
+    show_pincount: true
+    image:
+      src: fyzicka-schema/fyzicky-konektor-pc-strana.png
+      caption: USB Type-A Connector
+  
+  PC1-2:
+    type: XLR Connector
+    subtype: male 3-pin
+    pins: [1, 2, 3]
+    pinlabels: [GND, Hot, Cold]
+    show_pincount: false
+    image:
+      src: fyzicka-schema/fyzicky-konektor-pc-strana.png
+      caption: XLR 3-pin Male Connector
+  
+  PC2-6:
+    type: RCA Connector
+    subtype: male
+    pins: [S, T]
+    pinlabels: [Ground, Signal]
+    show_pincount: false
+    image:
+      src: fyzicka-schema/fyzicky-konektor-pc-strana.png
+      caption: RCA Plug Connector
+  
+  PC2-2:
+    type: DB9 Connector
+    subtype: male
+    pins: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    pinlabels: [DCD, RX, TX, DTR, GND, DSR, RTS, CTS, RI]
+    show_pincount: true
+    image:
+      src: fyzicka-schema/fyzicky-konektor-pc-strana.png
+      caption: DB9 Serial Connector
+  
 cables:
   W1:
-    gauge: 0.25 mm2
+    gauge: 24 AWG
     length: 0.2
+    color: BK  # Cable jacket color
     color_code: DIN
-    wirecount: 4
-    shield: true
+    wirecount: 3
+    shield: SN  # Matching the shield color in the image
+    #image:
+      #src: resources/cable-WH+BN+GN+shield.png
+      #height: 70  # Scale the image size slightly down
+      #caption: Cross-section
+
+connections:
+  -
+    - ZDROJ1-8: [S,R,T]
+    - W1: [WH,BN,GN]
+  -
+    - ZDROJ1-8: S
+    - W1: s
