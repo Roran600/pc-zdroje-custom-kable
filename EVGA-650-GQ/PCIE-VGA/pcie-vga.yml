@@ -1,53 +1,57 @@
 connectors:
   ZDROJ1-8:
-    type: Phone Connector
-    subtype: male 3.5
-    pins: [T, R, S]
-    pinlabels: [Dot, Dash, Ground]
+    type: Molex Mini-Fit JR
+    subtype: male 8 pin
+    pins: [1, 2, 3, 4 ,5 ,6 ,7 ,8]
+    pinlabels: [GND, GND, SENSE A, GND, GND, 12V, 12V, SENSE B]
     show_pincount: false
     image:
-      src: fyzicka-schema/fyzicky-konektor-zdroj-strana.png
-      caption: Tip, Ring, and Sleeve
-  
+      src: fyzicka-schema/fyzicky-konektor-zdroj-strana.png 
+      height: 70  # Scale the image size slightly down
+      caption: Konektor - Zdroj strana
+   
   PC1-6:
-    type: USB Connector
-    subtype: male A
-    pins: [1, 2, 3, 4]
-    pinlabels: [VCC, D-, D+, GND]
+    type: Molex Mini-Fit JR
+    subtype: male 6 pin
+    pins: [1, 2, 3, 5, 6, 7]
+    pinlabels: [GND, SENSE A, GND, 12V, 12V, 12V]
     show_pincount: true
     image:
-      src: fyzicka-schema/fyzicky-konektor-pc-strana.png
-      caption: USB Type-A Connector
-  
+      src: fyzicka-schema/fyzicky-konektor-pc-strana.png 
+      height: 70  # Scale the image size slightly down
+      caption: Konektor - PC strana
   PC1-2:
-    type: XLR Connector
-    subtype: male 3-pin
-    pins: [1, 2, 3]
-    pinlabels: [GND, Hot, Cold]
+    type: Molex Mini-Fit JR
+    subtype: male 2 pin
+    pins: [4, 8]
+    pinlabels: [GND, SENSE B]
     show_pincount: false
     image:
-      src: fyzicka-schema/fyzicky-konektor-pc-strana.png
-      caption: XLR 3-pin Male Connector
+      src: fyzicka-schema/fyzicky-konektor-pc-strana.png 
+      height: 70  # Scale the image size slightly down
+      caption: Konektor - PC strana
   
   PC2-6:
-    type: RCA Connector
-    subtype: male
-    pins: [S, T]
-    pinlabels: [Ground, Signal]
+    type: Molex Mini-Fit JR
+    subtype: male 6 pin
+    pins: [1, 2, 3, 5, 6, 7]
+    pinlabels: [GND, SENSE A, GND, 12V, 12V, 12V]
     show_pincount: false
     image:
-      src: fyzicka-schema/fyzicky-konektor-pc-strana.png
-      caption: RCA Plug Connector
+      src: fyzicka-schema/fyzicky-konektor-pc-strana.png 
+      height: 70  # Scale the image size slightly down
+      caption: Konektor - PC strana
   
   PC2-2:
-    type: DB9 Connector
-    subtype: male
-    pins: [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    pinlabels: [DCD, RX, TX, DTR, GND, DSR, RTS, CTS, RI]
+    type: Molex Mini-Fit JR
+    subtype: male 2 pin 
+    pins: [4, 8]
+    pinlabels: [GND, SENSE B]
     show_pincount: true
     image:
-      src: fyzicka-schema/fyzicky-konektor-pc-strana.png
-      caption: DB9 Serial Connector
+      src: fyzicka-schema/fyzicky-konektor-pc-strana.png 
+      height: 70  # Scale the image size slightly down
+      caption: Konektor - PC strana
   
 cables:
   W1:
@@ -63,9 +67,4 @@ cables:
       #caption: Cross-section
 
 connections:
-  -
-    - ZDROJ1-8: [S,R,T]
-    - W1: [WH,BN,GN]
-  -
-    - ZDROJ1-8: S
-    - W1: s
+ 
