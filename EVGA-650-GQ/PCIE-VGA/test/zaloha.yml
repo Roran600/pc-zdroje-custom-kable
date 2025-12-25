@@ -1,0 +1,114 @@
+connectors:
+  ZDROJ1-8:
+    type: Molex Mini-Fit JR
+    subtype: male 8 pin
+    pins: [1, 2, 3, 4 ,5 ,6 ,7 ,8]
+    pinlabels: [GND, GND, SENSE A, GND, GND, 12V, 12V, SENSE B]
+    show_pincount: false
+    image:
+      src: fyzicka-schema/fyzicky-konektor-zdroj-strana.png
+      height: 70  # Scale the image size slightly down
+      caption: Konektor - Zdroj strana
+  ZDROJ2-8:
+    type: Molex Mini-Fit JR
+    subtype: male 8 pin
+    pins: [1, 2, 3, 4 ,5 ,6 ,7 ,8]
+    pinlabels: [GND, GND, SENSE A, GND, GND, 12V, 12V, SENSE B]
+    show_pincount: false
+    image:
+      src: fyzicka-schema/fyzicky-konektor-zdroj-strana.png
+      height: 70  # Scale the image size slightly down
+      caption: Konektor - Zdroj strana
+   
+  PC1-6:
+    type: Molex Mini-Fit JR
+    subtype: male 6 pin
+    pins: [1, 2, 3, 5, 6, 7]
+    pinlabels: [GND, SENSE A, GND, 12V, 12V, 12V]
+    show_pincount: true
+    image:
+      src: fyzicka-schema/fyzicky-konektor-pc-strana.png 
+      height: 70  # Scale the image size slightly down
+      caption: Konektor - PC strana
+  PC1-2:
+    type: Molex Mini-Fit JR
+    subtype: male 2 pin
+    pins: [4, 8]
+    pinlabels: [GND, SENSE B]
+    show_pincount: false
+    image:
+      src: fyzicka-schema/fyzicky-konektor-pc-strana.png 
+      height: 70  # Scale the image size slightly down
+      caption: Konektor - PC strana
+  
+  PC2-6:
+    type: Molex Mini-Fit JR
+    subtype: male 6 pin
+    pins: [1, 2, 3, 5, 6, 7]
+    pinlabels: [GND, SENSE A, GND, 12V, 12V, 12V]
+    show_pincount: false
+    image:
+      src: fyzicka-schema/fyzicky-konektor-pc-strana.png 
+      height: 70  # Scale the image size slightly down
+      caption: Konektor - PC strana
+  
+  PC2-2:
+    type: Molex Mini-Fit JR
+    subtype: male 2 pin 
+    pins: [4, 8]
+    pinlabels: [GND, SENSE B]
+    show_pincount: true
+    image:
+      src: fyzicka-schema/fyzicky-konektor-pc-strana.png 
+      height: 70  # Scale the image size slightly down
+      caption: Konektor - PC strana
+  
+cables:
+  W1:
+    gauge: 24 AWG
+    length: 0.2
+    color: BK  # Cable jacket color
+    color_code: DIN
+    wirecount: 8
+    shield: SN  # Matching the shield color in the image
+    #image:
+      #src: resources/cable-WH+BN+GN+shield.png
+      #height: 70  # Scale the image size slightly down
+      #caption: Cross-section
+  W2:
+    gauge: 24 AWG
+    length: 0.2
+    color: BK  # Cable jacket color
+    color_code: DIN
+    wirecount: 8
+    shield: SN  # Matching the shield color in the image
+      #image:
+      #src: resources/cable-WH+BN+GN+shield.png
+      #height: 70  # Scale the image size slightly down
+      #caption: Cross-section
+
+connections:
+  -
+    - ZDROJ1-8: [4, 3, 2, 7, 6, 5]
+    - W1 : [1, 2, 3, 4, 5, 6]
+    - PC1-6: [1, 2, 3, 5, 6, 7]
+  -
+    - ZDROJ1-8: [1,8]
+    - W1 : [7,8]
+    - PC1-2: [4,8]
+  -
+    - ZDROJ1-8: [2]
+    - W1: s
+    - PC1-6: [3]
+  -
+    - ZDROJ2-8: [4, 3, 2, 7, 6, 5]
+    - W2 : [1, 2, 3, 4, 5, 6]
+    - PC2-6: [1, 2, 3, 5, 6, 7]
+  -
+    - ZDROJ2-8: [1,8]
+    - W2 : [7,8]
+    - PC2-2: [4,8]
+  -
+    - ZDROJ2-8: [2]
+    - W2: s
+    - PC2-6: [3]
