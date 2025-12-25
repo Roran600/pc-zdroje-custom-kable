@@ -6,7 +6,7 @@ connectors:
     pinlabels: [GND, GND, SENSE A, GND, GND, 12V, 12V, SENSE B]
     show_pincount: false
     image:
-      src: fyzicka-schema/fyzicky-konektor-zdroj-strana.png 
+      src: fyzicka-schema/fyzicky-konektor-zdroj-strana.png
       height: 70  # Scale the image size slightly down
       caption: Konektor - Zdroj strana
    
@@ -59,12 +59,42 @@ cables:
     length: 0.2
     color: BK  # Cable jacket color
     color_code: DIN
-    wirecount: 3
+    wirecount: 8
     shield: SN  # Matching the shield color in the image
     #image:
-      #src: resources/cable-WH+BN+GN+shield.png
-      #height: 70  # Scale the image size slightly down
-      #caption: Cross-section
+     #src: resources/cable-WH+BN+GN+shield.png
+     #height: 70  # Scale the image size slightly down
+     #caption: Cross-section
+  W2:
+    gauge: 24 AWG
+    length: 0.2
+    color: BK  # Cable jacket color
+    color_code: DIN
+    wirecount: 8
+    shield: SN  # Matching the shield color in the image
 
 connections:
- 
+  -
+    - ZDROJ1-8: [4, 3, 2, 7, 6, 5]
+    - W1: [1, 2, 3, 4, 5, 6]
+    - PC1-6: [1, 2, 3, 5, 6, 7]
+  -
+    - ZDROJ1-8: [1,8]
+    - W1: [7,8]
+    - PC1-2: [4,8]
+  -
+    - ZDROJ1-8: [2]
+    - W1: s
+    - PC1-6: [3]
+  -
+    - PC1-6: [1, 2, 3, 5, 6, 7]
+    - W2: [1, 2, 3, 4, 5, 6]
+    - PC2-6: [1, 2, 3, 5, 6, 7]
+  -
+    - PC1-2: [4,8]
+    - W2: [7,8]
+    - PC2-2: [4,8]
+  -
+    - PC1-6: [3]
+    - W2: s
+    - PC2-6: [3]
