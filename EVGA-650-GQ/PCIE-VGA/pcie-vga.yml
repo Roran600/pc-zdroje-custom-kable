@@ -60,7 +60,7 @@ cables:
     color: BK  # Cable jacket color
     color_code: DIN
     wirecount: 8
-    shield: SN  # Matching the shield color in the image
+    shield:   # Matching the shield color in the image
     #image:
      #src: resources/cable-WH+BN+GN+shield.png
      #height: 70  # Scale the image size slightly down
@@ -71,7 +71,7 @@ cables:
     color: BK  # Cable jacket color
     color_code: DIN
     wirecount: 8
-    shield: SN  # Matching the shield color in the image
+    shield:  # Matching the shield color in the image
 
 connections:
   -
@@ -83,10 +83,6 @@ connections:
     - W1: [7,8]
     - PC1-2: [4,8]
   -
-    - ZDROJ1-8: [2]
-    - W1: s
-    - PC1-6: [3]
-  -
     - PC1-6: [1, 2, 3, 5, 6, 7]
     - W2: [1, 2, 3, 4, 5, 6]
     - PC2-6: [1, 2, 3, 5, 6, 7]
@@ -94,7 +90,3 @@ connections:
     - PC1-2: [4,8]
     - W2: [7,8]
     - PC2-2: [4,8]
-  -
-    - PC1-6: [3]
-    - W2: s
-    - PC2-6: [3]
